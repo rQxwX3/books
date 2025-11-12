@@ -30,7 +30,7 @@ $
 *2.1-2* Consider the procedure _Sum-Array_ on the facing page. It computes the sum of the $n$ numbers in the array $A[1 : n]$. State a loop invariant for this procedure, and use its initialization, maintenance, and termination properties to show that the _Sum-Array_ procedure retrurns the sum of the numbers in $A[1 : n]$.
 
 
-#let code = [
+#let sumArray = [
 _*Sum-Array(A, n)*_
 ```
 sum = 0
@@ -40,7 +40,7 @@ return sum
 ```
 ]
 
-#zebraw(code)
+#zebraw(sumArray)
 
 _consider the following invariant:_
 
@@ -75,3 +75,19 @@ $
 $
 
 _which is the given array itself._ 
+
+*2.1-3* Rewrite the _Insertion-Sort_ procedure to sort into monotonically decreasing instead of monotonically increasing order.
+
+#let insertionSort = [
+_*Insertion-Sort(A, n)*_
+```
+for i = 2 to n
+  key = A[i]
+  j = i - 1
+  while j > 0 and A[j] < key
+    A[j + 1] = A[j]
+    j = j - 1
+  A[j + 1] = key
+```]
+
+#zebraw(insertionSort)
