@@ -91,3 +91,37 @@ for i = 2 to n
 ```]
 
 #zebraw(insertionSort)
+
+*2.1-4* Consider the searching problem:
+
+*_Input:_* $thin$ A sequence of $n$ numbers $[a_1, a_2, ..., a_n]$ stored in array $A[1 : n]$ and a value $x$.
+
+*_Output:_* $thin$ An index $i$ such that $x$ equals $A[i]$ or the special value _NIL_ if $x$ does not appear in $A$.
+
+Write pseudocode for linear search, which scans through the array from beginning to end, looking for $x$. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties.
+
+#let linearSearch = [
+  _*Linear-Search(A, n)*_
+  ```
+  for i = 1 to n
+    if A[i] == x
+      return i
+  return NIL
+  ```
+]
+
+#zebraw(linearSearch)
+
+_consider the following invariant:_
+
+_during _ $i$_th iteration, it is guaranteed that value _ $x$ _is not contained in the subarray_
+
+$
+  A[1 : i - 1]
+$
+
+_INITIALIZATION: not only $x$, but nothing is contained in the array $A[1 : 0]$. _
+
+_MAINTENANCE: if $x$ was present in the subarray $A[1 : i - 1]$ Linear-Search procedure (which checks every index from $1$ to $n$) would have returned $i$, so if loop hasn't terminated, $x$ wasn't in the subarray._
+
+_TERMINATION: since loop hasn't terminated prematurely (vie _`return` _statement), the_ `if` _condition has never been evaluated to true, meaning $x$ was never found in the array $A[1 : n]$._
