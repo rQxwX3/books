@@ -66,4 +66,7 @@ _on average_ $(Sigma_(i = 1)^n i) / n = (n + 1) / 2$ _checks have to be performe
 _in the worst-case, the element being searched for is located at the end of the array, so_ $n$ _elements have to be checked._
 
 _running time for both cases is expressed as_ $Theta(n)$_, since highest-order terms are $n$, and constants are dropped._ 
- 
+
+*2.2-4* How can you modify any sorting algorithm to have a good best-case running time?
+
+_checking whether or not the array is already sorted brings *Selection-Sort*'s best-case running time from $Theta(n^2)$ down to $Theta(n).$ the same applies to any algorithm that has equal best-case and worst-case running times._
