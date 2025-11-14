@@ -125,3 +125,38 @@ _INITIALIZATION: not only $x$, but nothing is contained in the array $A[1 : 0]$.
 _MAINTENANCE: if $x$ was present in the subarray $A[1 : i - 1]$ Linear-Search procedure (which checks every index from $1$ to $n$) would have returned $i$, so if loop hasn't terminated, $x$ wasn't in the subarray._
 
 _TERMINATION: since loop hasn't terminated prematurely (vie _`return` _statement), the_ `if` _condition has never been evaluated to true, meaning $x$ was never found in the array $A[1 : n]$._
+
+*2.1-5* Consider the problem of adding two $n$-element arrays $A[0 : n - 1]$ and $B[0 : n - 1], thin$ where each element is either 0 or 1, $a = Sigma_(i = 0)^(n - 1) A[i] dot 2 ^ i thin$, and $b = Sigma_(i = 0)^(n - 1) B[i] dot 2 ^ i. thin$ The sum $c = a + b thin$ of the two integers should be stored in binary form an $(n + 1)hyph$element array $C[0 : n],thin$ where #box[$c = Sigma_(i = 0)^(n) C[i] dot 2 ^ i.thin$]Write a procedure _Add-Binary-Integers_ that takes as input arrays $A$ and $B$, along with the length $n$, and returns array $C$ holding the sum.
+
+#let addBinaryIntegers = [
+  _*Add-Binary-Integers(A, B, n)*_
+  ```
+  carry = 0
+
+  for i = 0 to n
+    sum = A[i] + B[i] + carry
+
+    C[i] = sum % 2
+    carry = sum / 2
+  
+  C[n + 1] = carry
+  ```
+]
+
+#zebraw(addBinaryIntegers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
