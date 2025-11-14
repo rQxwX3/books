@@ -140,6 +140,8 @@ _TERMINATION: since loop hasn't terminated prematurely (vie _`return` _statement
     carry = sum / 2
   
   C[n + 1] = carry
+
+  return C
   ```
 ]
 
