@@ -45,4 +45,25 @@ $i = n arrow.r.double thin$ _the subarray is_ $A[1 : n].$_ since subarray stays 
 
 _it would not have been wise to have the algorithm run for all the elements of the given array since last iteration of the outer _ `for` _loop would result in redundant reassignment of _ $A[i]$ _to itself (without inner _ `for` _loop ever being invoked)_.
 
-_it can be immediately said from absence of any conditional statements (other than upper-bound check for counter variables) in the loops of the algorithm, that worst-case and best-case running times are equivalent. linear search is an input-independent operation. both worst- and best-case running time is_ $Theta(n^2)$. 
+_it can be immediately said from absence of any conditional statements (other than upper-bound check for counter variables) in the loops of the algorithm, that worst-case and best-case running times are equivalent. linear search is an input-independent operation (in terms of input's organization, not size). both worst- and best-case running time is_ $Theta(n^2)$. 
+
+*2.2-3* Consider linear search again (see Exercise 2.1-4). How many elements of the input array need to be checked on average, assuming that the element being searched for is equally likely to be any element of the array? How about in the worst case? Using $Theta$-notation, give the average-case and worst-case running times of linear search. Justify your answers.
+
+#let linearSearch = [
+  _*Linear-Search(A, n)*_
+  ```
+  for i = 1 to n
+    if A[i] == x
+      return i
+  return NIL
+  ```
+]
+
+#zebraw(linearSearch)
+
+_on average_ $(Sigma_(i = 1)^n i) / n = (n + 1) / 2$ _checks have to be performed._
+
+_in the worst-case, the element being searched for is located at the end of the array, so_ $n$ _elements have to be checked._
+
+_running time for both cases is expressed as_ $Theta(n)$_, since highest-order terms are $n$, and constants are dropped._ 
+ 
