@@ -29,11 +29,11 @@ $
 
 _consider the following loop invariant:_
 
-#align(center)[_during $i$th iteration subarray_ $A[1 : i]thin$_is sorted_.]
+#align(center)[_during $i$th iteration subarray_ $A[1 : i - 1]thin$_is sorted_.]
 
 _INITIALIZATION:_
 
-$i = 1 arrow.r.double thin$ _the subarray is_ $A[1 : 1] thin$ _(a single element). such array is always sorted._
+$i = 1 arrow.r.double thin$ _the subarray is_ $A[1 : 0]. thin$ _such array is always sorted._
 
 _MAINTENANCE:_
 
@@ -41,7 +41,7 @@ _during any subsequent iteration the smallest element in the unsorted part of th
 
 _TERMINATION:_
 
-$i = n arrow.r.double thin$ _the subarray is_ $A[1 : n].$_ since subarray stays sorted during loop execution (MAINTENANCE statement), and subarray after loop termination consitutes the original array, it can be said that algorithm is correct._ 
+$i = n + 1 arrow.r.double thin$ _the subarray is_ $A[1 : n].$_ since subarray stays sorted during loop execution (MAINTENANCE statement), and subarray after loop termination consitutes the original array, it can be said that algorithm is correct._ 
 
 _it would not have been wise to have the algorithm run for all the elements of the given array since last iteration of the outer _ `for` _loop would result in redundant reassignment of _ $A[i]$ _to itself (without inner _ `for` _loop ever being invoked)_.
 
