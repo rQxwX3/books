@@ -9,13 +9,13 @@ $
 [31, 41, 59, 26, 41, 58], #text(" current element is 26")\
 $
  
-_during this step, elements that form subarray [1:3] are shifted to the right by one. after position [1] is freed, 26 is placed in the beginning of the array._
+_during this step, elements that form subarray $[1:3]$ are shifted to the right by one. after position $[1]$ is freed, $26$ is placed in the beginning of the array._
 
 $
 [26, 31, 41, 59, 41, 58], #text(" current element is 41")\
 $
 
-_since #h(.25%) $59 > 41$, but #h(.25%) $41 <= 41$,_ #h(.25%) `while` _loop only iterates once, and during the iteration, _41 _switches positions with_ #h(.25%) 59
+_since #h(.25%) $59 > 41$, but #h(.25%) $41 <= 41$,_ #h(.25%) `while` _loop only iterates once, and during the iteration, _$41$ _switches positions with_ #h(.25%) $59$
 
 $
 [26, 31, 41, 41, 59, 58], #text(" current element is 58")\
@@ -27,7 +27,7 @@ $
 [26, 31, 41, 41, 58, 59], #text(" loop terminates")\
 $
 
-*2.1-2* Consider the procedure _Sum-Array_ on the facing page. It computes the sum of the $n$ numbers in the array $A[1 : n]$. State a loop invariant for this procedure, and use its initialization, maintenance, and termination properties to show that the _Sum-Array_ procedure retrurns the sum of the numbers in $A[1 : n]$.
+*2.1-2* Consider the procedure _Sum-Array_ on the facing page. It computes the sum of the $n$ numbers in the array $A[1 : n]$. State a loop invariant for this procedure, and use its initialization, maintenance, and termination properties to show that the _Sum-Array_ procedure returns the sum of the numbers in $A[1 : n]$.
 
 
 #let sumArray = [
@@ -44,7 +44,7 @@ return sum
 
 _consider the following invariant:_
 
-_during $i$th iteration, variable _ `sum` _equals to the sum of numbers in subarray_ $ A[1:(i-1 + i thick slash thick n)] $  _note that "/" is integer division operator, returning the quotient._
+_during $i$th iteration, variable _ `sum` _equals to the sum of numbers in subarray_ $ A[1:(i-1 + i thick slash thick n)] $  _note that "/" is integer division operator, which returns the quotient._
 
 _INITIALIZATION:_
 
@@ -58,7 +58,7 @@ _since there are no elements in this subarray, and variable _ `sum` _currently h
 
 _MAINTENANCE:_
 
-_since invariant is proved to be true prior to first iteration, and during subsequent iterations _ $A[i]$ _is added to variable _ `sum`, _the aforementioned variable indeed holds sum of elements forming the subarray in the invariant statement. as a concrete example, below is subarray's boundaries evaluated for the second _`(i = 2)` _iteration:_
+_since invariant is proved to be true prior to first iteration, and during subsequent iterations, _ $A[i]$ _is added to variable _ `sum`, _the aforementioned variable indeed holds sum of elements forming the subarray in the invariant statement. as a concrete example, below is subarray's boundaries evaluated for the second _`(i = 2)` _iteration:_
 
 $
   A[1 : 1]
@@ -68,7 +68,7 @@ _such subarray only holds first element of the original sequence, and variable _
 
 _TERMINATION:_
 
-_right after the loop has terminated _ `sum` _has a value that corresponds to sum of elements in the subarray:_
+_right after the loop has terminated, _ `sum`_'s value corresponds to sum of elements in the subarray:_
 
 $
   A[1 : n - 1 + n / n] = A[1 : n]
@@ -122,9 +122,9 @@ $
 
 _INITIALIZATION: not only $x$, but nothing is contained in the array $A[1 : 0]$. _
 
-_MAINTENANCE: if $x$ was present in the subarray $A[1 : i - 1]$ Linear-Search procedure (which checks every index from $1$ to $n$) would have returned $i$, so if loop hasn't terminated, $x$ wasn't in the subarray._
+_MAINTENANCE: if $x$ was present in the subarray $A[1 : i - 1], thin$ Linear-Search procedure (which checks every index from $1$ to $n$) would have returned $i$, so if loop hasn't terminated, $x$ wasn't in the subarray._
 
-_TERMINATION: since loop hasn't terminated prematurely (vie _`return` _statement), the_ `if` _condition has never been evaluated to true, meaning $x$ was never found in the array $A[1 : n]$._
+_TERMINATION: since loop hasn't terminated prematurely (via _`return` _statement), the_ `if` _condition has never been evaluated to true, meaning $x$ was never found in the array $A[1 : n]$._
 
 *2.1-5* Consider the problem of adding two $n$-element arrays $A[0 : n - 1]$ and $B[0 : n - 1], thin$ where each element is either 0 or 1, $a = Sigma_(i = 0)^(n - 1) A[i] dot 2 ^ i thin$, and $b = Sigma_(i = 0)^(n - 1) B[i] dot 2 ^ i. thin$ The sum $c = a + b thin$ of the two integers should be stored in binary form an $(n + 1)hyph$element array $C[0 : n],thin$ where #box[$c = Sigma_(i = 0)^(n) C[i] dot 2 ^ i.thin$]Write a procedure _Add-Binary-Integers_ that takes as input arrays $A$ and $B$, along with the length $n$, and returns array $C$ holding the sum.
 
