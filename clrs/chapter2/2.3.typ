@@ -49,3 +49,17 @@ _*inductive step:* let us now prove that with this assumption neither of the rec
 #align(center, [_Merge-Sort($A, p_1, q_1$) $quad quad$ Merge-Sort($A, q_1 + 1, r_1$)_])
 
 _the lowest value of $q_1 = floor((p_1 + r_1)/2)$ is $p_1$, the highest is $r_1$ ($p_1 <= q_1 <= r_1$). these statements are based on the restriction set in the inductive hypothesis, and guarantee that neither of the calls above will fail to conform with that same restriction, if applied to them._
+
+*2.3-3* State a loop invariant for the *while* loop of lines 12-18 of the Merge procedure. Show how to use it, along with the *while* loop of lines 20-23 and 24-27, to prove that the Merge procedure is correct.
+
+_consider the following invariant for the first_ `while` _loop:_
+
+_subarray _ $A[p : k - 1]$ _is sorted on every iteration of the loop_
+
+_INITIALIZATION: subarray _ $A[p : -1]$ _ contains no elements, thus is sorted._
+
+_MAINTENANCE: all elements are stored in two sorted arrays: _ $L[0 : n_L]$ _and_ $R[0 : n_R]$. _on each iteration of the _ `while` _loop the smallest of the remaining elements of these arrays is inserted into _ #box[$A[0 : n]$]. _The counter variable_ `k` _is updated after the insertion. This guarantees that loop invariant is maintained._
+
+_TERMINATION: right after loop termination, $k = min(n_L, n_R)$. The subarray _$A[p : k - 1]$ _is sorted._
+
+_combining this loop invariant with similar ones for the other two loops, one can see that all elements of the smaller arrays are inserted into _ $A[0 : n],$ _maintaining correct order. one of the latter_ `while` _loops inserts the rest of the elements of the bigger array without changing their position (smaller arrays are sorted)._
