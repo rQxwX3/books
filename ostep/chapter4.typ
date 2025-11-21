@@ -13,3 +13,7 @@ _after reviewing the code of_ `process-run.py` _file, one can see that order mat
 *4* We'll now explore some of the other flags. One important is `-S`, which determines how the system reacts when a process issues an I/O. With the flag set to `SWITCH_ON_THE_END`, the system will NOT switch to another process while one is doing I/O, instead wating until the process is completely finished. What happens when you run the following two processes (`-l 1:0,4:100 -c -S SWITCH_ON_END`), one doing I/O, and the other doing CPU work?
 
 _unlike what we've seen in the previous problem, in this case, the scheduler will wait for the first I/O-issuing process to terminate before giving control to the second one. this results in 7 + 4 = 11 ticks being required for both of the processes to terminate._
+
+*5* Now, run the same processes, but with the switching behavior set to switch to another process whenever one is WAITING for I/O (`-l 1:0,4:100 -c -S SWITCH_ON_IO`). What happens now? Use `-c` and `-p` to confirm that you are right.
+
+_scheduler first transfers control to the first process, which issues and I/O, control is then (after one tick) transfered to the second process (as per_ `SWITCH_ON_IO`_ option). for 4 next ticks the second process runs its instructions on the CPU. after that the seconds process terminates, and nothing is being calculated on the CPU for one tick. the last tick is for I/O termination of the first process. 7 ticks in total._
