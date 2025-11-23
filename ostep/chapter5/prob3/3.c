@@ -1,10 +1,10 @@
 /*
  * Solution to OSTEP Chapter 5, Problem 3.
  *
- * This code ensures that child process prints to stdio before its parent
+ * This code ensures that child process prints to stdout before its parent
  * without using wait() system call. It is done using global state (a file).
  * Once the file is changed by the child process, parent process proceeds to
- * printing to stdio.
+ * printing to stdout.
  *
  */
 
