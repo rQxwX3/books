@@ -50,4 +50,28 @@ _2. Tecumseh_
 
 _1. With \$1 million the attacker can purchase $10^6 : 50 = 20000$ ASICs. If all of those are run in parallel, $10^13$ key checks can be checked each second. This means that an average key search takes only about $10^18$ years, which is approximately 100,000,000 lifetimes of the universe._
 
-2. This would take approximately 102 years.
+_2. This would take approximately 102 years._
+
+*1.4.* We now consider the relation between passwords and key size. For this purpose we consider a cryptosystem where the user enters a key in the form of a password.
+
+1. Assume a password consisting of 8 letters, where each letter is encoded with the ASCII code (7 bits per character, i.e., 128 possible characters). What is the size of the key space which can be constructed by such passwords?
+
+2. What is the corresponding key length in bits?
+
+3. Assume that most users use only the 26 lowercase letters from the alphabet instead of the full 7 bits of the ASCII-encoding. What is the corresponding key length in bits in this case?
+
+4. At least how many characters are required for a password in order to generate a key length of 128 bits in case of letters consisting of
+
+  a. 7-bit characters?
+
+  b. 26 lowercase letters from the alphabet?
+
+_1. $128^7 = 2^49$_
+
+_2. 49 bits_
+
+_3. 32 bits_
+
+_4. (a) 19 characters_
+
+_5. (b) 28 characters_
