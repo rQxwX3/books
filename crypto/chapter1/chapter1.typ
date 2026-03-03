@@ -75,3 +75,33 @@ _3. 32 bits_
 _4. (a) 19 characters_
 
 _5. (b) 28 characters_
+
+*1.5.* In case of a brute-force attack, we have to search the entire key space of a cipher. To prevent such a search from being successful, the key space must be sufficiently large. It is crucial to observe that the key space grows exponentially with the key length in bits. With this problem we want to get a better understanding of such an exponential growth. According to an anecdote, the inventor of chess asked the king for a humble reward in the form of grains of rice: On the first feild of the chess board, the king should put one grain of rice, on the second feild two grains of rice, on the third field four grains etc. 
+
+1. How many grains of rice are on the last field of the chess board?
+
+2. A single grain of rice has a weight of approximately 0.03 g. What is the total weight of all grains on the board? Compare the total weight with the worldwide yield of approximately 480 million tons per year. 
+
+Now, let us consider a piece of paper that is repeatedly folded. The thickness of the paper increases exponentially: It has twice the thickness if folded once, four times the thickness if folded twice etc. For the following tasks, we assume a piece of paper which is 0.1 mm thick. 
+
+3. How thick is the paper after 10 folding steps?
+
+4. How often do we need to fold it to obtain a thickness of 1 km? 
+
+5. How often do we need to fold it to obtain the distance from the Earth to the Moon (384,400 km)?
+
+6. How often do we need to fold it to obtain the distance of one light year, i.e., $9.46 dot 10^15$ km? 
+
+_Remark:_ Obviously, folding a piece of paper that often will not work out very well in practice. 
+
+_1. approximately $9 dot 10^18$ grains_
+
+_2. the total weight is approximately 553 billion tonns, which is more than a thousand times more than the annual worldwide yield_
+
+_3. 102.4 mm_
+
+_4. 24 times_
+
+_5. 42 times_
+
+_6. 56 times_
