@@ -41,3 +41,13 @@ _1. Since we know that the message was encrypted with the shift cipher, identify
 `if we all unite we will cause the rivers to stain the great waters with their blood`
 
 _2. Tecumseh_
+
+*1.3.* We consider the long-term security of the Advanced Encryption Standard (AES) with a key length of 128 bits with respect to exhaustive key-search attacks. AES is perhaps the most widely used symmetric cipher at this time.
+
+1. Assume that an attacker has a special-purpose hardware chips (also known as ASICs, or application-specific integrated circuits) that check $5 dot 10^8$ keys per second, and she has a budget of \$1 million. One ASIC costs \$50, and we assume 100% overhead for integrating the ASIC (manufacturing the printed circuit boards, power supply, cooling, etc.). How many ASICs can we run in parallel with the given budget? How long does an average key search take? Relate this time to the age of the Universe, which is about $10^10$ years. 
+
+2. We try now to take advances in computer technology into account. Predicting the future tends to be tricky but the estimate usually applied is Moore’s law, which states that the computing power doubles every 18 months while the costs of integrated circuits stay constant. How many years do we have to wait until a key-search machine can be built to break AES with 128 bits with an average search time of 24 hours? Again, assume a budget of \$1 million (do not take inflation into account). 
+
+_1. With \$1 million the attacker can purchase $10^6 : 50 = 20000$ ASICs. If all of those are run in parallel, $10^13$ key checks can be checked each second. This means that an average key search takes only about $10^18$ years, which is approximately 100,000,000 lifetimes of the universe._
+
+2. This would take approximately 102 years.
