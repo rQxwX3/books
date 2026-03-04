@@ -166,4 +166,16 @@ _4. $-11 dot 3 = -33 = -3 dot 13 + 6 = 6 mod 13$_
 
 _all of the expressions on the left side of the $mod$ operator in the given problem are members of the same equivalence class_
 
+*1.8.* Compute without a calculator:
 
+1. $1 \/ 5 mod 13$
+
+2. $1 \/ 5 mod 7$
+
+3. $3 dot 2 \/ 5 mod 7$
+
+_1. $1 \/ 5$_
+
+_2. $1 \/ 5$_
+
+_3. $6 \/ 5$_
