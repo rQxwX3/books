@@ -105,3 +105,41 @@ _4. 24 times_
 _5. 42 times_
 
 _6. 56 times_
+
+*1.6.* In this problem we consider the difference between end-to-end encryption (E2EE) and more classical approaches to encrypting when communicating over a channel that consists of multiple parts. E2EE is widely used, e.g., in instant messaging services such as WhatsApp or Signal. The idea behind this is that encryption and decryption are performed by the two users who communicate and all parties eavesdropping on the communication link cannot read (or meaningfully manipulate) the message. 
+
+In the following we assume that each individual encryption with the cipher e() is secure, i.e., the cryptographic algorithm cannot be broken by an adversary. First we look at the communication between two smartphones without end-to-end encryption, shown in Figure 1.7. Encryption and/or decryption happen three times in this setting: Between Alice and base station A (air link), between base stations A and B (through the internet), and between base station B and Bob (again, air link).
+
+1. Describe which of the following attackers can read (and meaningfully manipulate) messages. 
+
+  a. A hacker who can listen to (and alter) messages on the air link between Alice and her base station. 
+
+  b. The mobile operator who runs and controls base station A. 
+
+  c. A national law enforcement agency that has power over the mobile operator and gains access to base station A or B. 
+
+  d. An intelligence agency of a foreign country that can wiretap any internet communication. 
+
+  e. The mobile operator who runs and controls base station B.
+
+  f. A hacker who can listen to (and alter) messages on the air link between Bob and his base station. 
+
+We now look at the same communication system but this time Alice and Bob use E2EE, cf. Figure 1.8
+
+2. Describe which of the following attackers can read (and meaningfully manipulate) messages in the communication systems with E2EE. 
+
+  a. A hacker who can listen to (and alter) messages on the air link between Alice and her base station. 
+
+  b. The mobile operator who runs and controls base station A. 
+
+  c. A national law enforcement agency that has power over the mobile operator and gains access to base station A or B. 
+
+  d. An intelligence agency of a foreign country that can wiretap any internet communication. 
+
+  e. The mobile operator who runs and controls base station B. 
+
+  f. A hacker who can listen to (and alter) messages on the air link between Bob and his base station.
+
+_1. b, c, d, e_
+
+_2. none of the above_
