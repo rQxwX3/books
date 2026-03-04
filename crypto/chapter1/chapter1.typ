@@ -143,3 +143,27 @@ We now look at the same communication system but this time Alice and Bob use E2E
 _1. b, c, d, e_
 
 _2. none of the above_
+
+*1.7.* As we learned in this chapter, modular arithmetic is the basis of many cryptosystems. We will now provide a number of exercises that help us get familiar with modular computations. Let’s start with an easy one: Compute the following result without a calculator.
+
+1. $15 dot 29 mod 13$
+
+2. $2 dot 29 mod 13$
+
+3. $2 dot 3 mod 13$
+
+4. $-11 dot 3 mod 13$
+
+The results should be given in the range from 0,1,..., modulus-1. Briefly describe the relation between the different parts ofthe problem.
+
+_1. $15 dot 29 = 435 = 33 dot 13 + 6 = 6 mod 13$_
+
+_2. $2 dot 29 = 58 = 4 dot 13 + 6 = 6 mod 13$_
+
+_3. $2 dot 3 = 6 = 6 mod 13$_
+
+_4. $-11 dot 3 = -33 = -3 dot 13 + 6 = 6 mod 13$_
+
+_all of the expressions on the left side of the $mod$ operator in the given problem are members of the same equivalence class_
+
+
