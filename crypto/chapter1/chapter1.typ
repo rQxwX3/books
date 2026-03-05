@@ -309,4 +309,20 @@ _4. 2 in $ZZ_4$, 2, 3, and 4 in $ZZ_6$. a multiplicative inverse exists for all 
 
 With this simple problem we want now to stress the fact that the inverse of an integer in a given ring depends completely on the ring considered. That is, if the modulus changes, the inverse changes. Hence, it doesn’t make sense to talk about an inverse of an element unless it is clear what the modulus is. This fact is crucial for the RSA cryptosystem, which is introduced in Chapter 7. The extended Euclidean algorithm, which can be used for computing inverses efficiently, is introduced in Section 6.3. 
 
+#align(center, [
 _9 in $ZZ_11$, 5 in $ZZ_12$, 8 in $ZZ_13$_
+])
+
+*1.11* Compute $x$ as far as possible without a calculator. Where appropriate, make use of a smart decomposition of the exponent as shown in the example in Section 1.4.1:
+
+1. $x equiv 3^2 mod 13 equiv 9 mod 13 => x= 9 + 13k, k in ZZ$
+
+2. $x equiv 7^2 mod 13 equiv 49 mod 13 equiv 10 mod 13 => x = 10 + 13k, k in ZZ$
+
+3. $x equiv 3^10 mod 13 equiv 3^3 dot 3^3 dot 3^3 dot 3 mod 13 equiv 1 dot 1 dot 1 dot 3 mod 13 => x = 3  + 13k, k in ZZ$
+
+4. $x equiv 7^100 mod 13 equiv (7^2)^50 mod 13 equiv 10^50 mod 13 equiv 100^25 mod 13 equiv 9^25 mod 13 equiv 27^8 dot 9 mod 13 equiv 9 mod 13 => x = 9 + 13k, k in ZZ$
+
+5. $7^x equiv 11 mod 13$ (by brute-force) $x = 5$
+
+The last problem is called a discrete logarithm and points to a hard problem which we discuss in Chapter 8. The security of many public-key schemes is based on the hardness of solving the discrete logarithm for large numbers, e.g., with more than 2000 bits. 
