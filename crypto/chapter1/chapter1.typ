@@ -304,3 +304,9 @@ _1-3_
 ))
 
 _4. 2 in $ZZ_4$, 2, 3, and 4 in $ZZ_6$. a multiplicative inverse exists for all nonzero elements in $ZZ_5$ because the modulo is odd, which means that for any nonzero element of the ring, an even element of the ring can be found that will be the inverse._
+
+*1.10* What is the multiplicative inverse of $5$ in $ZZ_11$, $ZZ_12$, and $ZZ_13$? You can do a trial-and-error search using a calculator or a PC. 
+
+With this simple problem we want now to stress the fact that the inverse of an integer in a given ring depends completely on the ring considered. That is, if the modulus changes, the inverse changes. Hence, it doesn’t make sense to talk about an inverse of an element unless it is clear what the modulus is. This fact is crucial for the RSA cryptosystem, which is introduced in Chapter 7. The extended Euclidean algorithm, which can be used for computing inverses efficiently, is introduced in Section 6.3. 
+
+_9 in $ZZ_11$, 5 in $ZZ_12$, 8 in $ZZ_13$_
